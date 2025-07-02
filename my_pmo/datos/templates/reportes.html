@@ -1,0 +1,24 @@
+{% include 'header.html' %}
+
+        <br><br>
+        <div class="container">
+            <h3 style="text-align: center;">{{ welcome_message }}</h3>
+            <img src="{{ marco_img }}" class="img-responsive">
+            <script>
+            // Este script se utiliza para representar de forma segura la descripción del rol.
+            document.write("{{ marco_desc_message|escapejs }}");
+            </script>
+            <hr style="border: 0.1px solid rgb(203, 200, 200)">
+            <p><b>{{opciones_message}}</b></p>
+            <ul>
+                <li><a href="http://localhost:8000/vista_datos/detail_marco/{{ tipo_message }}">Sobre la metodología</a></li>
+                <li><a href="http://localhost:8000/vista_datos/rep_roles/{{ tipo_message }}">Roles y Funciones</a></li>
+                <li><a href="http://localhost:8000/vista_datos/rep_metodos/{{ tipo_message }}">Eventos</a></li> <!-- En la Base de Datos MMA -->
+                <!-- <li><a>Artefactos</a></li>  En la Base de Datos MMA -->
+            </ul>
+        </div>
+
+     <!-- Image of location/map -->
+    <img src="/static/img/reports.png" class="img-responsive" style="width:100%">
+    
+{% include 'footer.html' %}

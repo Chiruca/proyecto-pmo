@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+    <div class="container">
+        <br>
+        <h3 style="text-align: center;">{{ welcome_message }}</h3>
+        <ul>
+            {% for x in pmoroles %}
+                <li><a href="/vista_datos/detail_rol/{{ x.id }}">{{ x.Rol_nom }}</a></li>
+            {% endfor %}
+        </ul>
+        <hr style="border: 0.1px solid rgb(203, 200, 200)">
+        <span class="span-izquierda"><b>Regresar a: </b>
+            <a href="http://localhost:8000/vista_datos/rep_all/SCRUM">Enfoque SCRUM</a></span>
+    </div>
+
+    <!-- Image of location/map -->
+    <br><br>
+    <img src="/static/img/all_roles.png" class="img-responsive" style="width:100%">
+    
+{% include 'footer.html' %}

@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+
+    <div class="container">
+        <br>
+        <h3 style="text-align: center;">{{ welcome_message }}</h3>
+        <img src="/static/img/dom_des.png" class="img-responsive">
+        <br>
+        <p>{{ domdes_header.DomDes_ben|safe }}</p>
+        <ul>
+            {% for x in pmodomdes %}
+                <li><a href="/vista_datos/detail_domdes/{{ x.id }}">{{ x.DomDes_nom }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <!-- Image of location/map -->
+    <br><br>
+    <img src="/static/img/all_roles.png" class="img-responsive" style="width:100%">
+    
+{% include 'footer.html' %}

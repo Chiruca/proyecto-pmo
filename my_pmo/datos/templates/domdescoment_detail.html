@@ -1,0 +1,21 @@
+{% include 'header.html' %}
+    <br>
+    <div class="container">
+        <h3>Comentarios sobre los {{ domdescoment.DomDesComent_tit }}</h3>
+        <p> <b>Descripción del Comentario:</b> </p>
+
+        <script>
+            // Este script se utiliza para representar de forma segura la descripción del dominio de desempeño.
+            document.write("{{ domdescoment.DomDesComent_desc|escapejs }}");
+        </script>
+        <br>
+
+        <hr style="border: 0.1px solid rgb(203, 200, 200)">
+        <span class="span-izquierda"><b>Regresar a: </b><a href="#">Detalles de Dominios de Desempeño</a></span>
+        
+    </div>
+
+    <!-- Image of location/map -->
+    <img src="/static/img/roles.png" class="img-responsive" style="width:100%">
+
+{% include 'footer.html' %}

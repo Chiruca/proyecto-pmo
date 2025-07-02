@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+
+    <div class="container">
+        <br>
+        <h3 style="text-align: center;">{{ metodo_message }}</h3>
+        <p>{{ pmomma.MMA_desc|safe }}</p>
+        <ul>
+            {% for x in pmomma_elem %}
+            <br>
+                <li><b><u>{{ x.MMAElem_nom }}</u></b> {{ x.MMAElem_desc|safe}}</li>
+            {% endfor %}
+        </ul>
+        <hr style="border: 0.1px solid rgb(203, 200, 200)">
+        <span class="span-izquierda"><b>Regresar a: </b><a href="http://localhost:8000/vista_datos/rep_metodos/{{ tipo }}">Eventos de SCRUM</a></span>
+        <!-- <span class="span-derecha"><b>Pilares y Valores: </b><a href="#">Ver Detalle</a></span> -->
+    </div>
+    
+    <!-- Image of location/map -->
+    <br><br>
+    <img src="/static/img/all_roles.png" class="img-responsive" style="width:100%">
+    
+{% include 'footer.html' %}

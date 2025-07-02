@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+    <br>
+    <div class="container">
+        <h3>{{ pmodomdes.DomDes_nom }}</h3>
+        <p> <b>Objetivos:</b> </p>
+        <p>{{ pmodomdes.DomDes_obj|linebreaksbr }}</p>
+        <p> <b>Beneficios:</b> </p>
+        <script>
+            // Este script se utiliza para representar de forma segura la descripción del dominio de desempeño.
+            document.write("{{ pmodomdes.DomDes_ben|escapejs }}");
+        </script>
+        
+        <hr style="border: 0.1px solid rgb(203, 200, 200)">
+        <span class="span-izquierda"><b>Regresar a: </b><a href="http://localhost:8000/vista_datos/rep_domdes/">Dominios de Desempeño</a></span>
+        <!-- <span class="span-derecha"><b>Ver: </b><a href="http://localhost:8000/vista_datos/rep_domdescoment/{{ id }}">Más Detalles</a></span> -->
+        
+        
+    </div>
+
+    <!-- Image of location/map -->
+    <img src="/static/img/roles.png" class="img-responsive" style="width:100%">
+
+{% include 'footer.html' %}

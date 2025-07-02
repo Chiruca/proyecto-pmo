@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+    <div class="container">
+        <br>
+        <h3 style="text-align: center;">{{ welcome_message }} {{ domdesnom }}</h3>
+        <ul>
+            {% for x in domdescoment %}
+                <li><a href="/vista_datos/detail_domdescoment/{{ x.id }}">{{ x.DomDesComent_tit }}</a></li>
+            {% endfor %}
+        </ul>
+        <hr style="border: 0.1px solid rgb(203, 200, 200)">
+        <span class="span-izquierda"><b>Regresar a: </b><a href="/vista_datos/detail_domdes/{{ id }}">{{ domdesnom }}</a></span>
+
+    </div>
+
+    <!-- Image of location/map -->
+    <br><br>
+    <img src="/static/img/all_roles.png" class="img-responsive" style="width:100%">
+    
+{% include 'footer.html' %}

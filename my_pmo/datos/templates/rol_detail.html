@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+    <br>
+    <div class="container">
+        <h3>{{ pmorol.Rol_nom }}</h3>
+        <p> <b>Descripción:</b> </p>
+
+        <script>
+            // Este script se utiliza para representar de forma segura la descripción del rol.
+            document.write("{{ pmorol.Rol_desc|escapejs }}");
+        </script>
+        
+        <hr style="border: 0.1px solid rgb(203, 200, 200)">
+        <span class="span-izquierda"><b>Regresar a: </b><a href="http://localhost:8000/vista_datos/rep_roles/{{ tipo_message }}">Roles</a></span>
+        
+        <!-- Para incorporar las funciones de cada rol de la tabla DomEco quitar el comentario de la linea que sigue -->
+        <!-- <span class="span-derecha"><b>Funciones del rol: </b><a href="#">Ver Detalle</a></span>  -->
+        
+    </div>
+
+    <!-- Image of location/map -->
+    <img src="/static/img/roles.png" class="img-responsive" style="width:100%">
+
+{% include 'footer.html' %}
