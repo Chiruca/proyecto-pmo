@@ -6,10 +6,18 @@ from .models import Rol, MarcoMetodo, MarcoObs, DomDes, DomDesComent, MMA, MMAEl
 
 # Create your views here.
 def tablas_view(request, tipo):
+   # Muestra las tablas de los marcos metodológicos
+    # Asegúrate de que 'tipo' es un string válido y corresponde a un objeto MarcoMetodo existente
+    if not isinstance(tipo, str):
+        return HttpResponse("Tipo inválido", status=400)
+    
+    # Obtiene el objeto MarcoMetodo correspondiente al tipo
+    # Asegúrate de que el tipo existe en la base de datos
     try:
         marco = MarcoMetodo.objects.get(Marco_nom=tipo)
     except MarcoMetodo.DoesNotExist:
         return HttpResponse("Marco Metodológico no encontrado.", status=404)
+
     # Si el marco es SCRUM, carga la imagen correspondiente
     if tipo == 'SCRUM':
         Marco_img = '/static/img/scrum.png'
