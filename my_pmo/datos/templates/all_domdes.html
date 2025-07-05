@@ -1,10 +1,11 @@
 {% include 'header.html' %}
 
+    <br><br><br>
+    <h3 style="text-align: center;">{{ welcome_message }}</h3>
+    <img src="/static/img/dom_des.png" class="img-responsive" style="width:80%; display: block; margin: auto;" alt="Dominio y Descripción">
+    
     <div class="container">
-        <br>
-        <h3 style="text-align: center;">{{ welcome_message }}</h3>
-        <img src="/static/img/dom_des.png" class="img-responsive">
-        <br>
+        
         <p>{{ domdes_header.DomDes_ben|safe }}</p>
         <ul>
             {% for x in pmodomdes %}

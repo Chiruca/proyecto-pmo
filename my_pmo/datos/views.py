@@ -109,7 +109,7 @@ def domdes_view(request):
     # Excluye el dominio de desempeño 'DESCRIPCIÓN GENERAL' y ordena por nombre
     pmodomdes = DomDes.objects.exclude(DomDes_nom='DESCRIPCIÓN GENERAL').order_by('DomDes_nom')
     context = {
-        'welcome_message': 'Áreas de Foco en la Gestión de Proyectos',
+        'welcome_message': 'Áreas de Interés en la Gestión de Proyectos',
         'domdes_header': domdes_header,
         'pmodomdes': pmodomdes,
     }
