@@ -102,8 +102,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pmoproject',  # Nombre de tu base de datos
-        'USER': 'root',
-        'PASSWORD': 'Admin_2024',
+        'USER': '***',                       # Coloca tu propio usuario
+        'PASSWORD': '****',                  # Coloca tu propia clave
         'HOST': 'localhost',
         'PORT': '3306',                      # Puerto de MySQL, por defecto es 3306
         'OPTIONS': {
