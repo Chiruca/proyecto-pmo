@@ -91,8 +91,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "pmoproject",
-        "USER": "postgres",
-        "PASSWORD": "PassMin24",
+        "USER": "****",                     # Coloca tu propio usuario
+        "PASSWORD": "*****",                # Coloca tu propia clave
         'HOST': 'localhost',
     }
 }
